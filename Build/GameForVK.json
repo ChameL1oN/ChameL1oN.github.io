@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "GameForVK.data.unityweb",
+"asmCodeUrl": "GameForVK.asm.code.unityweb",
+"asmMemoryUrl": "GameForVK.asm.memory.unityweb",
+"asmFrameworkUrl": "GameForVK.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
