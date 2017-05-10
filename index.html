@@ -11,7 +11,26 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GameForVK.json", {onProgress: UnityProgress});
     </script>
+    <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+    <script type="text/javascript"> 
+  VK.init(function() { 
+    
+    VK.callMethod("showSettingsBox", 8214);
+     // API initialization succeeded 
+     // Your code here 
+  }, function() { 
+     // API initialization failed 
+     echo "hi";
+     // Can reload page here 
+}, '5.64'); 
+</script>
   </head>
+
+  <?php 
+$bd = mysql_connect("mysql.hostinger.ru","u697865703_cham","759Fbnjdbkmzc");
+mysql_select_bd("u697865703_test",$bd);
+?>
+
   <body>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
