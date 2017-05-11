@@ -14,13 +14,14 @@
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
     <script type="text/javascript"> 
   VK.init(function() { 
-    alert("kyda blya");
+    //alert("kyda blya");
   //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
   if (mysql_query("SELECT 1 FROM Profiles WHERE ID = ?",
-  $VK.user.id))
-  echo (VK.user.id);
+  $VK.viewer_id))
+
+  echo (VK.viewer_id);
   else
-    echo (VK.user.id + ' ошибка');
+    echo (VK.viewer_id + ' ошибка');
     //VK.callMethod("showSettingsBox", 8214);
      // API initialization succeeded 
      // Your code here 
