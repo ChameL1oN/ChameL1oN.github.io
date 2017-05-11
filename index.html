@@ -11,7 +11,11 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GameForVK.json", {onProgress: UnityProgress});
     </script>
-
+    <script type="text/javascript">
+            VK.api("users.get", {'user_ids' : 1}, function(data) { 
+               console.log(data.response[0].last_name);
+            });
+        </script>
   
   <?php 
   $bd = mysql_connect("mysql.hostinger.ru","u697865703_cham","759Fbnjdbkmzc");
@@ -34,11 +38,7 @@
      // Can reload page here 
 }, '5.64'); 
 
-<script type="text/javascript">
-            VK.api("users.get", {'user_ids' : 1}, function(data) { 
-               console.log(data.response[0].last_name);
-            });
-        </script>
+
 
   function GetUserInfoVK()
                         {
