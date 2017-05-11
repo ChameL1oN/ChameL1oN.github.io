@@ -25,12 +25,15 @@
   //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
   //if (bd_query("SELECT 1 FROM Profiles WHERE ID = ?", $_GET(viewer_id)))
   //alert(VK.users.get&user_ids={viewer_id});
-  VK.callMethod("showInstallBox"); 
+ // VK.callMethod("showInstallBox"); 
   var view;
  VK.api('users.get',{viewer_id : ''},function(data) { 
   if (data.response) { 
    alert(data);
   } 
+  else {
+    alera("suka");
+  }
   }); 
      // API initialization succeeded 
      // Your code here 
