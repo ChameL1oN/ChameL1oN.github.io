@@ -30,7 +30,7 @@
      // API initialization succeeded 
    //  GetUserInfoVK();
      // Your code here 
-      VK.api("users.get", {'user_ids' : 1}, function(data) { 
+      VK.api("users.get", {'user_ids' : VK.viewer_id}, function(data) { 
                alert(data.response[0].id);
             });
   }, function() { 
