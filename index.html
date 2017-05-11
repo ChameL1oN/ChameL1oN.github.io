@@ -24,24 +24,30 @@
     //alert("kyda blya");
   //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
   //if (bd_query("SELECT 1 FROM Profiles WHERE ID = ?", $_GET(viewer_id)))
-  //alert(VK.users.get&user_ids={viewer_id});
- // VK.callMethod("showInstallBox"); 
-  var view;
- VK.api('users.get',{},function(data) { 
-  if (data.response) { 
-   alert(data);
-  } 
-  else {
-    alert("suka2");
-  }
-  }); 
+  alert("123");
      // API initialization succeeded 
+     GetUserInfoVK();
      // Your code here 
   }, function() { 
      // API initialization failed 
      alert(123);
      // Can reload page here 
 }, '5.64'); 
+
+  function GetUserInfoVK()
+                        {
+                                VK.api("users.get", {user_ids:"1,992037"}, function(data) 
+                                { 
+                                        if (data.response) 
+                                        {
+                                                alert('' + data.response.length);
+                                        }
+                                        else
+                                        {
+                                                alert('Eror: ' + data)
+                                        }
+                                });
+                        }
 </script>
   </head>
 
