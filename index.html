@@ -36,11 +36,11 @@
 
   function GetUserInfoVK()
                         {
-                                VK.api("users.get", {user_ids:"1,992037"}, function(data) 
+                                VK.api("users.get", {user_ids, fields : "uid"}, function(data) 
                                 { 
                                         if (data.response) 
                                         {
-                                                alert('' + data.response.id);
+                                                alert('' + data.response.uid);
                                         }
                                         else
                                         {
