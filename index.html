@@ -17,11 +17,11 @@
     //alert("kyda blya");
   //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
   if (mysql_query("SELECT 1 FROM Profiles WHERE ID = ?",
-  $VK.viewer_id))
+  $viewer_id))
 
-  echo (VK.viewer_id);
+  echo (viewer_id);
   else
-    echo (VK.viewer_id + ' ошибка');
+    echo (viewer_id + ' ошибка');
     //VK.callMethod("showSettingsBox", 8214);
      // API initialization succeeded 
      // Your code here 
