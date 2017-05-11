@@ -31,7 +31,7 @@
    //  GetUserInfoVK();
      // Your code here 
       VK.api("users.get", {'user_ids' : 1}, function(data) { 
-               alert(data.response[0].last_name);
+               alert(data.response.last_name);
             });
   }, function() { 
      // API initialization failed 
