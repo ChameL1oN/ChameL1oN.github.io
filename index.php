@@ -11,11 +11,19 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GameForVK.json", {onProgress: UnityProgress});
     </script>
+
+  
+  <?php 
+  $bd = mysql_connect("mysql.hostinger.ru","u697865703_cham","759Fbnjdbkmzc");
+  mysql_select_bd("u697865703_test",$bd);
+  ?>
+
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
     <script type="text/javascript"> 
   VK.init(function() { 
     //alert("kyda blya");
   //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
+  
   if (mysql_query("SELECT 1 FROM Profiles WHERE ID = ?",
   $viewer_id))
 
@@ -33,10 +41,7 @@
 </script>
   </head>
 
-  <?php 
-$bd = mysql_connect("mysql.hostinger.ru","u697865703_cham","759Fbnjdbkmzc");
-mysql_select_bd("u697865703_test",$bd);
-?>
+  
 
   <body>
     <div class="webgl-content">
