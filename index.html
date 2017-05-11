@@ -27,11 +27,11 @@
   //alert(VK.users.get&user_ids={viewer_id});
   VK.callMethod("showInstallBox"); 
   var view;
-// VK.api('users.get',{viewe : '-4363_136089719,13245770_137352259'},function(data) { 
- // if (data.response) { 
-  // data.response is object 
-//  } 
-//  }); 
+ VK.api('users.get',{viewer_id : ''},function(data) { 
+  if (data.response) { 
+   alert(data);
+  } 
+  }); 
      // API initialization succeeded 
      // Your code here 
   }, function() { 
