@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | IZI SHOOTER</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GameForVK.json", {onProgress: UnityProgress});
+    </script>
+
+    <?php 
+  $bd = mysql_connect("mysql.hostinger.ru","u697865703_cham","759Fbnjdbkmzc");
+  mysql_select_bd("u697865703_test",$bd);
+  ?>
+
+  <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+    <script type="text/javascript"> 
+  VK.init(function() { 
+  //  alert(VK.user_id);
+  //  mysql_query ("INSERT INTO dannye ('Pole".($key+1)."') VALUES ('".$value."')");
+  //if (bd_query("SELECT 1 FROM Profiles WHERE ID = ?", $_GET(viewer_id)))
+  //alert("123");
+     // API initialization succeeded 
+   //  GetUserInfoVK();
+     // Your code here 
+      VK.api("users.get", {'user_ids' : VK.viewer_id}, function(data) { 
+               alert(data.response[0].id);
+            });
+  }, function() { 
+     // API initialization failed 
+     alert(123);
+     // Can reload page here 
+}, '5.64'); 
+
+
+  function GetUserInfoVK()
+                        {
+                                VK.api("users.get", {user_ids, fields : "uid"}, function(data) 
+                                { 
+                                        if (data.response) 
+                                        {
+                                                alert('' + data.response.uid);
+                                        }
+                                        else
+                                        {
+                                                alert('Eror: ' + data)
+                                        }
+                                });
+                        }
+  </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">IZI SHOOTER</div>
+      </div>
+    </div>
+  </body>
+</html>
